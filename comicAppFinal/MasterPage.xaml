@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="using:comicAppFinal"
+             x:Class="comicAppFinal.MasterPage"
+             Padding="0,40,0,0"
+             Icon="hamburger.png"
+             Title="Personal Organiser">
+       
+        <StackLayout  Padding="0,30,0,0"
+                Margin="0,-40,0,0">
+        <StackLayout BackgroundColor="#282626" Opacity="0.80"
+            Padding="0,94,0,50" Margin="0,-30,0,0" >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="110" />
+                <ColumnDefinition Width="130" />
+            </Grid.ColumnDefinitions>
+             <Button Text="Sign In" BackgroundColor="Maroon" 
+                    TextColor="White" 
+                     CornerRadius="0"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                      Grid.ColumnSpan="2"
+                     x:Name="login"
+                     />
+            <Button Text="Create Account" TextColor="White" 
+                     Grid.Row="1"
+                      Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    x:Name="createAccount"/>
+        </Grid>
+       </StackLayout>
+        <ListView x:Name="listView" x:FieldModifier="Public" 
+                  SeparatorVisibility="None">
+           <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:MasterPageItem}">
+                
+                 <local:MasterPageItem Title="Home"
+                    TargetType="{x:Type local:HomePage}"
+                    IconSource="home_white.png"/>
+                 <local:MasterPageItem Title="Library" 
+                    TargetType="{x:Type local:LibraryPage}" 
+                    IconSource="library_white.png"/>
+                 <local:MasterPageItem Title="Genres" 
+                        IconSource="star_white.png" 
+                        TargetType="{x:Type local:GenresPage}"/>
+                 <local:MasterPageItem Title="Account" 
+                        IconSource="user_white.png" 
+                        TargetType="{x:Type local:AccountPage}" />
+                  <local:MasterPageItem Title="Settings" 
+                        IconSource="settings_white.png" 
+                        TargetType="{x:Type local:SettingsPage}"/>
+                  <local:MasterPageItem Title="My List" 
+                        IconSource="list_white.png" 
+                        TargetType="{x:Type local:SettingsPage}"/>
+                  <local:MasterPageItem Title="Privacy Policy" 
+                        TargetType="{x:Type local:SettingsPage}"/>
+
+                  <local:MasterPageItem Title="Publishers" 
+                       TargetType="{x:Type local:LoginPage}"/>
+                 <local:MasterPageItem Title="Terms of use" 
+                         
+                    TargetType="{x:Type local:RegisterPage}"/>
+                </x:Array>
+            </ListView.ItemsSource>          
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10"   BackgroundColor="#282626">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" ></RowDefinition>
+                            <RowDefinition Height="Auto" ></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>  
+                                <ColumnDefinition Width="Auto"/> 
+                                 <ColumnDefinition Width="Auto"/> 
+                        </Grid.ColumnDefinitions>
+                   
+                        <Image Source="{Binding IconSource}" 
+                               Grid.Row="0"
+                               Grid.Column="1" />
+                        <Label Text="{Binding Title}" 
+                               TextColor="White" 
+                               FontSize="Micro"
+                               Grid.Row="0"
+                               Grid.Column="2"/>
+                               
+                                                                   
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>    
+        </StackLayout>
+</ContentPage>

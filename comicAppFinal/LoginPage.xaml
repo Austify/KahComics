@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="comicAppFinal.LoginPage">
+  
+    <Grid BackgroundColor="#282626" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="480" />
+          
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="38" />
+             
+        </Grid.ColumnDefinitions>
+        <StackLayout BackgroundColor="#282626" 
+                     Grid.Row="0"
+                     Grid.Column="1"
+                    
+                     VerticalOptions="CenterAndExpand">
+          <Image Source="logo.png" WidthRequest="100"  
+                 HeightRequest="100" />
+          <Label Text="Sign In To Kah Studios" TextColor="white" 
+                 HorizontalTextAlignment="Center"
+                 Margin="0,0,0,20"/>
+          
+          <Entry Placeholder="Email" x:Name="email" 
+                 HeightRequest="40" />
+          <Entry Placeholder="Password" x:Name="password" 
+                 HeightRequest="40" />
+          
+          <Button Text="Sign In" TextColor="White"
+                  BorderColor="White"
+                  BorderWidth="0.3"
+                  Margin="0,20,0,0"
+                  CornerRadius="0"/> 
+            <Label Text="Forgot Your Password?" TextColor="White" 
+                   HorizontalTextAlignment="Center"
+                   Margin="0,20,0,0"/>
+            <Grid ColumnSpacing="-20" Padding="20,30,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Not a Member?" TextColor="Red" 
+                       Grid.Column="0" FontSize="Micro"
+                       HorizontalTextAlignment="End"
+                       Margin="0,0,0,0"/>
+                <Label Text="Create a new Account" FontSize="Micro"
+                       TextColor="White" 
+                       Grid.Column="1"
+                       HorizontalTextAlignment="End"
+                       Margin="0,0,0,0"/>
+            </Grid>
+            
+        </StackLayout>
+    </Grid>
+   
+</ContentPage>

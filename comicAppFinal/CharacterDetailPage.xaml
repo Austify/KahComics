@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="comicAppFinal.CharacterDetailPage">
+    <ScrollView BackgroundColor="#171717">
+        <StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" 
+                     HorizontalOptions="FillAndExpand"
+                     Margin="0,0,0,0">
+                     
+            <Image Source="blackPanther.png"
+                   Margin="0,40,0,0" 
+                   Aspect="AspectFit"/>
+        </StackLayout>
+        <StackLayout Padding="20,20,20,1" >
+            <Label Text="Black Panther" TextColor="white"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <Label Text="Black Panther is the first superhero of African descent in mainstream American comics,having debuted years before early black superheroes such as Marvel Comics' the Falcon (1969),Luke Cage (1972) and Blade (1973) or DC Comics' John Stewart in the role of Green Lantern (1971)." 
+                   TextColor="White"
+                   FontSize="Small"/>
+        </StackLayout>
+        <StackLayout Padding="20">
+            <Label Text="Capabilities" TextColor="Yellow"
+                   FontSize="18"
+                   FontAttributes="Bold"/>
+            <Label Text="Superhuman strength, speed, stamina, reflexes, endurance, and durability"
+                   TextColor="White"
+                   FontSize="Small"
+                   Margin="0,0,0,50"/>   
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <BoxView BackgroundColor="Black"></BoxView>
+        </StackLayout>
+        </StackLayout>    
+    </ScrollView>
+       
+ 
+</ContentPage>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="comicAppFinal.HomePage"
+             BackgroundColor="#282626">
+    
+        <NavigationPage.TitleView>  
+        <StackLayout Orientation="Horizontal" >
+          <Image Source="logo.png"  HorizontalOptions="CenterAndExpand"/>
+          <Image Source="search.png"  HorizontalOptions="End" Margin="0,0,20,0"/>   
+        </StackLayout>     
+    </NavigationPage.TitleView>
+<StackLayout>
+        <ScrollView>
+            
+         <StackLayout>
+                  <Image Source="boxer_woman.jpg" />
+                  <StackLayout HeightRequest="550" 
+                       BackgroundColor="#282626"
+                        Margin="0,-150,0,55">
+                    
+       <Label Text="New &amp; Trending"
+        FontSize="Medium"
+        HorizontalTextAlignment="Center" 
+        TextColor="White"
+        FontAttributes="Bold" 
+        Margin="0,0,0,0"/> 
+        
+      <CollectionView ItemsSource="{Binding sliders}" 
+                HorizontalOptions="CenterAndExpand" >
+    <CollectionView.ItemsLayout>
+        <ListItemsLayout>
+            <x:Arguments>
+                <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>    
+            </x:Arguments>
+        </ListItemsLayout>             
+     </CollectionView.ItemsLayout>        
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <Grid Padding="0,10,0,0" >
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Url}"
+                       Aspect="AspectFill"
+                       HeightRequest="165"
+                       WidthRequest="155" 
+                       Grid.Row="0"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+                 <Label Text="{Binding Name}" TextColor="white" 
+                        FontSize="Small"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="End"
+                        Margin="-30"/>       
+            </Grid>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+  <Label Text="Popular"   VerticalTextAlignment="Center" TextColor="White" 
+               HorizontalTextAlignment="Center" 
+         FontSize="Medium"
+         FontAttributes="Bold"
+         Margin="0,0,0,0"/>
+<CollectionView ItemsSource="{Binding sliders}" 
+                HorizontalOptions="CenterAndExpand" >
+    <CollectionView.ItemsLayout>
+        <ListItemsLayout>
+            <x:Arguments>
+                <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>    
+            </x:Arguments>
+        </ListItemsLayout>             
+     </CollectionView.ItemsLayout>        
+    <CollectionView.ItemTemplate>
+        <DataTemplate>
+            <Grid Padding="0,7,0,0" >
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Url}"
+                       Aspect="AspectFill"
+                       HeightRequest="165"
+                       WidthRequest="155" 
+                       Grid.Row="0"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+                 <Label Text="{Binding Name}" TextColor="white" 
+                        FontSize="Small"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="End"
+                        Margin="-30"/>       
+            </Grid>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>                    
+                    
+                    
+                    
+                </StackLayout>
+                
+            </StackLayout>
+          
+        </ScrollView>
+    
+    <StackLayout BackgroundColor="Black" VerticalOptions="EndAndExpand" 
+                     HorizontalOptions="FillAndExpand" Orientation="Horizontal"
+                     Margin="0">
+           <StackLayout Orientation="Vertical" WidthRequest="130" >
+                <Image Source="home.png" WidthRequest="35" 
+                       HorizontalOptions="Center" />
+                <Label Text="Home" FontSize="Micro" HorizontalOptions="Center" 
+                       TextColor="White"/>
+            </StackLayout>
+              <StackLayout Orientation="Vertical" WidthRequest="70" >
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Character_Clicked" />
+                </StackLayout.GestureRecognizers>
+                <Image Source="character.png" WidthRequest="29" 
+                       HorizontalOptions="Center" />
+                <Label Text="Character" FontSize="Micro" HorizontalOptions="Center" 
+                       TextColor="White"/>
+            </StackLayout>
+              <StackLayout Orientation="Vertical" WidthRequest="100" >
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Download_Clicked" />
+                </StackLayout.GestureRecognizers>
+                <Image Source="download.png" WidthRequest="35" 
+                       HorizontalOptions="Center" />
+                <Label Text="Download" FontSize="Micro" HorizontalOptions="Center" 
+                       TextColor="White"/>
+            </StackLayout>
+              <StackLayout Orientation="Vertical" WidthRequest="50" >
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Profile_Clicked" />
+                </StackLayout.GestureRecognizers>
+                <Image Source="profile.png" WidthRequest="35" 
+                       HorizontalOptions="Center" />
+                <Label Text="Profile" FontSize="Micro" HorizontalOptions="Center" 
+                       TextColor="White"/>
+            </StackLayout>     
+        </StackLayout>
+</StackLayout>
+</ContentPage>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="comicAppFinal.ProfilePage"
+             BackgroundColor="#171717">
+<StackLayout>
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <Grid>
+            <Grid.RowDefinitions> 
+                <RowDefinition Height="50" />
+                <RowDefinition Height="Auto" /> 
+                <RowDefinition Height="Auto" />     
+            </Grid.RowDefinitions>  
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" /> 
+                <ColumnDefinition Width="40" /> 
+                <ColumnDefinition Width="40" />    
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="40" />
+                 <ColumnDefinition Width="Auto" />     
+            </Grid.ColumnDefinitions> 
+            <Image Source="settings_white.png" 
+                Grid.Row="1"
+                Grid.Column="1"/> 
+            <controls:CircleImage Source="profile_woman.png"
+                Grid.Row="1"
+                Grid.Column="3"/> 
+            <Image Source="edit_white.png"
+                Grid.Row="1"
+                Grid.Column="5"/>
+            <Label Text="Okoro Linda Chibugo" 
+                   TextColor="White"
+                   Grid.Row="2"
+                   Grid.Column="3"
+                   HorizontalTextAlignment="Center"/> 
+             <Label Text="chibugokoro@gmail.com" 
+                   TextColor="White"
+                   Grid.Row="3"
+                   Grid.Column="3"
+                    HorizontalTextAlignment="Center"/>    
+                
+        </Grid>   
+    </StackLayout>  
+     <StackLayout>
+       
+     <Grid HorizontalOptions="CenterAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+             <RowDefinition Height="Auto" />        
+        </Grid.RowDefinitions> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />        
+        </Grid.ColumnDefinitions> 
+         <Label  Text="Favourite" TextColor="white" 
+            FontAttributes="Bold"
+            Grid.Column="0"
+            Grid.Row="0"
+            VerticalTextAlignment="Center"/>         
+        <Image Source="pin.png" 
+           Grid.Row="1"
+           Grid.Column="0"/>   
+         <Image Source="pin.png" 
+            Grid.Row="1"
+            Grid.Column="1"/> 
+         <Image Source="pin.png"
+            Grid.Column="2"
+            Grid.Row="1"/>         
+     </Grid>   
+     </StackLayout>   
+     <StackLayout>
+       
+     <Grid HorizontalOptions="CenterAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+             <RowDefinition Height="Auto" />        
+        </Grid.RowDefinitions> 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />        
+        </Grid.ColumnDefinitions> 
+         <Label  Text="Continue Reading" TextColor="white" 
+            FontAttributes="Bold"
+            Grid.Column="0"
+            Grid.Row="0"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"/>         
+        <Image Source="pin.png" 
+           Grid.Row="1"
+           Grid.Column="0"/>   
+         <Image Source="pin.png" 
+            Grid.Row="1"
+            Grid.Column="1"/> 
+         <Image Source="pin.png"
+            Grid.Column="2"
+            Grid.Row="1"/>         
+     </Grid>   
+     </StackLayout>     
+</StackLayout>
+</ContentPage>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="comicAppFinal.SettingsPage"
+             Title="Settings" BackgroundColor="#171717">
+    <StackLayout BackgroundColor="#171717" 
+                 VerticalOptions="StartAndExpand">
+        <StackLayout>
+          <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />    
+                <RowDefinition Height="Auto" />    
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30" />
+                 <ColumnDefinition Width="Auto" />
+                 <ColumnDefinition Width="90" />    
+            </Grid.ColumnDefinitions>   
+            <Label Text="General" 
+                TextColor="Yellow"
+                VerticalOptions="EndAndExpand"   
+               Grid.Row="0"
+               Grid.Column="1"
+               FontAttributes="Bold"/> 
+            <Label Text="Sound" TextColor="White" 
+                FontAttributes="Bold"
+                Grid.Row="1"
+                Grid.Column="1"/> 
+              <Label Text="Enable Notification Sounds" 
+                TextColor="White" 
+                FontSize="Micro"
+                FontAttributes="Bold"
+                Grid.Row="2"
+                Grid.Column="1"/> 
+                <Switch OnColor="Yellow" 
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    HorizontalOptions="End"
+                    Scale="0.5" />
+                <Label Text="Vibration" TextColor="Yellow" 
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    FontAttributes="Bold"/>
+                <Label Text="Enable Notification vibration" 
+                       TextColor="White"
+                      Grid.Row="4"
+                      Grid.Column="1"
+                       FontSize="Micro"/>
+                <Switch OnColor="Yellow" 
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    HorizontalOptions="End"
+                    Scale="0.5" />
+          </Grid>
+        </StackLayout>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="90" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Notifications" 
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    TextColor="Yellow"
+                    VerticalOptions="EndAndExpand"
+                    FontAttributes="Bold"/>
+                <Label Text="All" 
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    TextColor="White"
+                    VerticalOptions="EndAndExpand"
+                    FontAttributes="Bold"/>
+                <Label Text="Enable all Notifications" 
+                    Grid.Row="2"
+                    FontSize="Micro"
+                    Grid.Column="1"
+                    TextColor="White"/>
+                <Switch OnColor="Yellow" 
+                        
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    HorizontalOptions="EndAndExpand"
+                    Scale="0.5"
+                    VerticalOptions="Start"/>
+                <Label Text="New Releases"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    />  
+                <Label Text="Enable Notifications for New Comics"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    TextColor="White"
+                    FontSize="Micro"   
+                    />
+                <Switch OnColor="Yellow" 
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    HorizontalOptions="EndAndExpand"
+                    Scale="0.5"
+                    VerticalOptions="Start"/>
+                <Label Text="Read More" 
+                    TextColor="White"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    FontAttributes="Bold"/>
+                <Label Text="Enable Notifications for What to read Next"
+                   Grid.Column="1"
+                   Grid.Row="6" 
+                    TextColor="White"
+                    FontSize="Micro"/>
+                <Switch OnColor="Yellow" 
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    HorizontalOptions="EndAndExpand"
+                    Scale="0.5"
+                    VerticalOptions="Start"/>
+            </Grid>
+        </StackLayout>
+        <StackLayout>
+            <Grid RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+              <Label Text="Account"
+                Grid.Row="0"
+                Grid.Column="1"
+                TextColor="Yellow"
+                VerticalOptions="EndAndExpand"
+                FontAttributes="Bold"/>
+              <Image Source="passwordLock" 
+                Grid.Row="1"
+                Grid.Column="1"
+                HeightRequest="25"
+                WidthRequest="30"/>
+              <Label Text="Change Password" 
+                TextColor="white"
+                Grid.Row="1"
+                Grid.Column="2"/>  
+              <Image Source="chevronRight" 
+                Grid.Column="3"
+                Grid.Row="1"/>  
+              <Image Source="user_white" 
+                Grid.Row="2" 
+                Grid.Column="1"/>
+              <Label Text="Edit Profile" 
+                Grid.Row="2"
+                Grid.Column="2"
+                TextColor="White"/>
+               <Image Source="chevronRight" 
+                Grid.Column="3"
+                Grid.Row="2"/>  
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
